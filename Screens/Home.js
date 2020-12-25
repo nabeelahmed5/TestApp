@@ -1,14 +1,15 @@
-import 'react-native-gesture-handler';
+import { ScrollView } from 'react-native-gesture-handler';
 import  React from 'react';
-import { View, Text, StyleSheet, Button, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Button, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Football from './Football';
 import Cricket from './Cricket';
 import Hockey from './Hockey';
 
-export default function HomeScreen() {  
+export default function Home ({navigation}){  
   return (
     <ScrollView>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Football')}>
         <Text style={styles.txt}>Football</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>

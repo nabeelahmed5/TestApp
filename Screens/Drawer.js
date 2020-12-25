@@ -97,9 +97,9 @@ export default function MyDrawer() {
       borderTopRightRadius: 20,
     }}
     drawerContent={props => <CustomDrawerContent {...props} />}>
-    <Drawer.Screen name="Home" component={HomeScreen}/>
-    <Drawer.Screen name="Profile" component={ProfileScreen}/>
-    <Drawer.Screen name="Notifications" component={NotificationScreen} />
+      <Drawer.Screen name="Home" component={HomeScreen}/>
+      <Drawer.Screen name="Profile" component={ProfileScreen}/>
+      <Drawer.Screen name="Notifications" component={NotificationScreen} />
     </Drawer.Navigator>
   );
   }
@@ -122,6 +122,8 @@ export default function MyDrawer() {
         
     },
     HomeContainer:{
+        paddingTop: 20,
+        paddingBottom: 50,
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#ffffff',
