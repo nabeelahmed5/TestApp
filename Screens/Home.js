@@ -1,30 +1,36 @@
 import 'react-native-gesture-handler';
 import  React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Button, TouchableOpacity, ScrollView } from 'react-native';
+import Football from './Football';
+import Cricket from './Cricket';
+import Hockey from './Hockey';
 
-
-export default function Home () {  
+export default function HomeScreen() {  
   return (
-    <View style={Styles.Container}>
-        <Text style={Styles.Text}>Categories</Text>
-        
-    </View>
+    <ScrollView>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.txt}>Football</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.txt}>Cricket</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.txt}>Hockey</Text>
+      </TouchableOpacity>
+    </ScrollView>
   );
 }
 
-
-const Styles = StyleSheet.create ({
-    Container:{
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#ffffff',
-        height: '100%',
-        width: '100%',
-    },
-    Text:{
-        color: '#000',
-        fontSize: 20,
-        fontWeight: '500',
-    }
+const styles= StyleSheet.create ({
+  button: {
+    backgroundColor: 'tomato',
+    padding: 75,
+    margin: 30,
+    borderRadius: 10,    
+  },
+  txt: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: '500',
+  }
 })
-
